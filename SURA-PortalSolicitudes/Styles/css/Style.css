@@ -1,0 +1,89 @@
+﻿div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    height: 135px;
+    width: 100%;
+    padding: 1em;
+    background: #ececec;
+    clear: left;
+    text-align: left;
+}
+
+nav {
+    margin-top: 10px;
+    height: 67px;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 26px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        font-size: 1.1em !important;
+    }
+}
+
+.navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-item {
+    color: black !important;
+    font-weight: 500;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.tabla-solicitudes {
+    height: 80%;
+}
+
+.logo-footer {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+}

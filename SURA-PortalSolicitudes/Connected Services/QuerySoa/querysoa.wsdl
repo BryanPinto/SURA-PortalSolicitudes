@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="QueryCases">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCasesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryCasesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryEntities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryEntitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryEntitiesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCasesAsString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sxml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCasesAsStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryCasesAsStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryEntitiesAsString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sxml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryEntitiesAsStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryEntitiesAsStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryCasesSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCases" />
+  </wsdl:message>
+  <wsdl:message name="QueryCasesSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryEntitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryEntities" />
+  </wsdl:message>
+  <wsdl:message name="QueryEntitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCasesAsStringSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCasesAsString" />
+  </wsdl:message>
+  <wsdl:message name="QueryCasesAsStringSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCasesAsStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryEntitiesAsStringSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryEntitiesAsString" />
+  </wsdl:message>
+  <wsdl:message name="QueryEntitiesAsStringSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryEntitiesAsStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCasesAsStringHttpGetIn">
+    <wsdl:part name="sxml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCasesAsStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryEntitiesAsStringHttpGetIn">
+    <wsdl:part name="sxml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryEntitiesAsStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCasesAsStringHttpPostIn">
+    <wsdl:part name="sxml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCasesAsStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryEntitiesAsStringHttpPostIn">
+    <wsdl:part name="sxml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryEntitiesAsStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="QueryFormSOASoap">
+    <wsdl:operation name="QueryCases">
+      <wsdl:input message="tns:QueryCasesSoapIn" />
+      <wsdl:output message="tns:QueryCasesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntities">
+      <wsdl:input message="tns:QueryEntitiesSoapIn" />
+      <wsdl:output message="tns:QueryEntitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCasesAsString">
+      <wsdl:input message="tns:QueryCasesAsStringSoapIn" />
+      <wsdl:output message="tns:QueryCasesAsStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntitiesAsString">
+      <wsdl:input message="tns:QueryEntitiesAsStringSoapIn" />
+      <wsdl:output message="tns:QueryEntitiesAsStringSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="QueryFormSOAHttpGet">
+    <wsdl:operation name="QueryCasesAsString">
+      <wsdl:input message="tns:QueryCasesAsStringHttpGetIn" />
+      <wsdl:output message="tns:QueryCasesAsStringHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntitiesAsString">
+      <wsdl:input message="tns:QueryEntitiesAsStringHttpGetIn" />
+      <wsdl:output message="tns:QueryEntitiesAsStringHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="QueryFormSOAHttpPost">
+    <wsdl:operation name="QueryCasesAsString">
+      <wsdl:input message="tns:QueryCasesAsStringHttpPostIn" />
+      <wsdl:output message="tns:QueryCasesAsStringHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntitiesAsString">
+      <wsdl:input message="tns:QueryEntitiesAsStringHttpPostIn" />
+      <wsdl:output message="tns:QueryEntitiesAsStringHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryFormSOASoap" type="tns:QueryFormSOASoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryCases">
+      <soap:operation soapAction="http://tempuri.org/QueryCases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntities">
+      <soap:operation soapAction="http://tempuri.org/QueryEntities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCasesAsString">
+      <soap:operation soapAction="http://tempuri.org/QueryCasesAsString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntitiesAsString">
+      <soap:operation soapAction="http://tempuri.org/QueryEntitiesAsString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QueryFormSOASoap12" type="tns:QueryFormSOASoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryCases">
+      <soap12:operation soapAction="http://tempuri.org/QueryCases" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntities">
+      <soap12:operation soapAction="http://tempuri.org/QueryEntities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCasesAsString">
+      <soap12:operation soapAction="http://tempuri.org/QueryCasesAsString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntitiesAsString">
+      <soap12:operation soapAction="http://tempuri.org/QueryEntitiesAsString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QueryFormSOAHttpGet" type="tns:QueryFormSOAHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="QueryCasesAsString">
+      <http:operation location="/QueryCasesAsString" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntitiesAsString">
+      <http:operation location="/QueryEntitiesAsString" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QueryFormSOAHttpPost" type="tns:QueryFormSOAHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="QueryCasesAsString">
+      <http:operation location="/QueryCasesAsString" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryEntitiesAsString">
+      <http:operation location="/QueryEntitiesAsString" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryFormSOA">
+    <wsdl:port name="QueryFormSOASoap" binding="tns:QueryFormSOASoap">
+      <soap:address location="http://35.199.164.149/Pilotos/webservices/querysoa.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QueryFormSOASoap12" binding="tns:QueryFormSOASoap12">
+      <soap12:address location="http://35.199.164.149/Pilotos/webservices/querysoa.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QueryFormSOAHttpGet" binding="tns:QueryFormSOAHttpGet">
+      <http:address location="http://35.199.164.149/Pilotos/webservices/querysoa.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QueryFormSOAHttpPost" binding="tns:QueryFormSOAHttpPost">
+      <http:address location="http://35.199.164.149/Pilotos/webservices/querysoa.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
